@@ -1,13 +1,16 @@
-body {
-    width: 784px;
-    height: 504px;
-    margin: 0px;
-    padding: 0px;
+@font-face {
+    font-family: "TT Lakes"; /* Название шрифта */
+    src: local("TT Lakes"), /* Попытка загрузить локальный шрифт */
+         url("TT Lakes.woff2") format("woff2"), /* Оптимизированный формат для современных браузеров */
+         url("TT Lakes.woff") format("woff"),   /* Альтернативный формат */
+         url("TT Lakes.ttf") format("truetype"); /* Для поддержки старых браузеров */
 }
 
-@font-face {
-    font-family: "TT Lakes";
-    src: url("TT Lakes.ttf");
+body {
+    width: 320px;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'TT Lakes', 'Arial', sans-serif;
 }
 
 .header {
@@ -26,79 +29,137 @@ body {
 
 .header__layout-left {
     display: flex;
-    justify-content: space-evenly;
-    width: 30%;
+    justify-content: space-around;
+    width: 40%;
     align-items: center;
+    flex-grow: 1;
 }
 
+.header__burger {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    width: 40%;
+    margin-left: 10px;
 
-.header__divider {
+}
+
+.header__burger::after {
+    content: "";
+    display: none;
     width: 2px;
     height: 32px;
     border-radius: 3px;
     background-color: #EAEAEA;
-
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .header__cps {
-    width: 96px;
+    width: 30%;
     height: 50px;
-
+    flex-grow: 1;
 }
+
+
 
 .header__layout-right {
     display: flex;
     width: 40%;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    margin-right: 30px;
-
+    
+    flex-shrink: 1;
+    margin-right: auto;
+    margin-left: auto;
     
 }
 
+.header__call {
+    display: none;
+}
+
+.header__chat {
+    display: none;
+}
+
+.header__profile {
+    display: none;
+}
+
+.header__repair {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around;
+    width: 30%;
+    flex-grow: 1;
+    
+}
+
+.header__repair::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 32px;
+    border-radius: 3px;
+    background-color: #EAEAEA;
+    
+    
+}
+
+.header__checkstatus {
+    display: flex;
+    flex-shrink: 1;
+}
+
 .main {
-    width: 95%;
-    height: 416px;
+    width: 100%;
+    height: auto;
     background-color: #F8F8F8;
+    overflow: hidden;
 
 }
 
 .main__title-layout {
     display: flex;
     justify-content: space-between;
-    width: 35%;
+    width: 100%;
     align-items: center;
 }
 
-.main__title-divider {
+
+.main__title {
+    display: flex;
+    width: 75%;
+    font-size: 28px;
+    letter-spacing: -2px;   
+    justify-content: space-between;
+}
+
+.main__title::before {
+    content: "";
+    display: block;
     width: 4px;
     height: 40px;
     background-color: #41F6D7;
 
-}
 
-.main__title {
-    font-family: 'TT Lakes', 'Arial';
-    font-size: 16px;
-    letter-spacing: -2px;
-    
+
+
 }
 
 .main__slide-menu {
     display: flex;
-    justify-content: center;
-    transform: translateX(100px);
-    
-    
+    margin-left: 20px;
 }
 
 .main__slide {
-    font-family: 'TT Lakes', 'Arial';
     padding: 10px;
     
     font-size: 14px;
     overflow: hidden;
-    flex-shrink: -1;
+    flex-shrink: 0;
     margin-bottom: 20px;
     
 }
@@ -110,48 +171,39 @@ body {
 
 .main__paragraph-layout {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+
 }
 
-.main__paragraph-layout-left {
-    display: flex;
-    width: 40%;
-    flex-direction: column;
-    
-    
-}
 
-.main__paragraph-layout-right {
-    display: flex;
-    width: 45%;
-    
-    
-}
 
 .main__paragraph-image {
-    
-    background-image: url(images/_MG_3223.svg);
     width: 100%;
-    height: 280px;
-    background-repeat: no-repeat;
-    flex-shrink: 0;
+    height: auto;
+    flex: 1 1 auto;
+    
 }
 
 .main__paragraph-article {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .main__paragraph-readAfter {
-    font-family: 'TT Lakes', 'Arial';
+    display: flex;
     font-weight: 700;
     font-size: 14px;
+    margin-bottom: 20px;
+    align-items: center;
 }
 
-.main__paragraph-readAfter::before {
-    content: "";
-    display: inline-block;
-    background-image: linear-gradient(white, black);
-    background-repeat: repeat-x;
-    width: 10px;
-    height: 10px;
+
+@media screen and (min-width: 400px){
+    .header__burger {
+        
+    }
 }
