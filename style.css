@@ -234,6 +234,35 @@ body {
     align-items: center;
 }
 
+.sidebar {
+    z-index: 5;
+    position: absolute;
+    width: 320px;
+    height: auto;
+    background-color: #ffffff;
+}
+
+.sidebar__header-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+.sidebar__header-layout-left {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.sidebar__header-layout-right {
+    display: flex;
+    width: 20%;
+}
+
+
+
 
 @media screen and (min-width: 400px) and (max-width: 768px){
 
