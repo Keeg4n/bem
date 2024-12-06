@@ -396,7 +396,7 @@ body {
     font-family: inherit;
     
 }
-
+/**/
 .sidebar__icon {
     transform: scale(1);
     transition: 0.5s ease-in-out;
