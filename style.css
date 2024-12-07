@@ -33,7 +33,7 @@ body {
     border-style: none;
     background-color: #fff;
     cursor: pointer;
-
+    background: none;
 }
 
 .header__layout-left {
@@ -138,6 +138,7 @@ body {
     width: 40px;
     height: 40px;
     cursor: pointer;
+    background: none;
 
 }
 
@@ -420,7 +421,7 @@ body {
     transform: scale(1);
     transition: 0.5s ease-in-out;
     border: none;
-    background-color: #fff;
+    background: none;
 }
 
 .sidebar__icon:hover {
@@ -435,7 +436,7 @@ body {
     color: #5a5050;
 }
 
-@media screen and (min-width: 400px) and (max-width: 768px){
+@media screen and (min-width: 520px) and (max-width: 960px){
 
     .header {
         justify-content: space-between;
@@ -534,7 +535,7 @@ body {
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 961px) {
     .header {
         display: none;
     }
