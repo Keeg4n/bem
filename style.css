@@ -9,6 +9,10 @@
   font-style: normal;
 }
 
+html {
+    
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -26,6 +30,9 @@ body {
 .header__icon {
     width: 40px;
     height: 40px;
+    border-style: none;
+    background-color: #fff;
+    cursor: pointer;
 
 }
 
@@ -130,6 +137,7 @@ body {
 .main__icon {
     width: 40px;
     height: 40px;
+    cursor: pointer;
 
 }
 
@@ -236,12 +244,21 @@ body {
 
 
 .sidebar {
+    transform: translateX(-320px);
     z-index: 5;
     position: absolute;
     width: 320px;
     height: 100%;
     background-color: #ffffff;
+    
+    transition: 1s;
+}
+
+.sidebar__show {
+    transform: translateX(0px);
+    transition: 1s;
     box-shadow:  5px 10px 20px 5px #837b7b;
+
 }
 
 .sidebar__header-layout {
@@ -282,6 +299,7 @@ body {
     background: #ffffff;
     
 }
+
 
 
 .sidebarmenu__item:hover {
@@ -335,6 +353,7 @@ body {
     height: 100%;
     text-decoration: none;
     color: black;
+    align-content: center;
 }
 
 .sidebarmenu__link:hover {
@@ -400,11 +419,14 @@ body {
 .sidebar__icon {
     transform: scale(1);
     transition: 0.5s ease-in-out;
+    border: none;
+    background-color: #fff;
 }
 
 .sidebar__icon:hover {
     transform: scale(1.1);
     transition: 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .footer__button--checked {
